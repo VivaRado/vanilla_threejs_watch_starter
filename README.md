@@ -12,7 +12,7 @@
 
 To run this code as is:
 
-1. Clone this repo: ```git clone https://github.com/VivaRado/Vanilla-ThreeJS-Starter```
+1. Clone this repo: ```git clone https://github.com/VivaRado/vanilla_threejs_watch_starter```
 1. Install Gulp: ```npm install -g gulp```
 1. Install Modules: ```npm install```
 1. Development **ThreeJS**:
