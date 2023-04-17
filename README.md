@@ -1,3 +1,5 @@
+![alt text](./README.png)
+
 ## **Preface**
 
 **Vanilla ThreeJS Starter** jumpstart Development and be ready for Production with ThreeJS hassle free!
