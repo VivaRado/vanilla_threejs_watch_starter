@@ -2,11 +2,11 @@
 
 ## **Preface**
 
-**Vanilla ThreeJS Starter** jumpstart Development and be ready for Production with ThreeJS hassle free!
+**Vanilla ThreeJS Watch Starter** jumpstart Development and be ready for Production with ThreeJS hassle free!
 
 ## **Introduction**
 
-**Vanilla ThreeJS Starter** is a [nodeJS](https://nodejs.org/en/) application that runs on [Express](https://www.npmjs.com/package/express). We use [Handlebars](https://www.npmjs.com/package/handlebars) for templating, reloaded on the server by [gulp](https://www.npmjs.com/package/gulp) and [nodemon](https://www.npmjs.com/package/nodemon), on the client-side with [reload](https://www.npmjs.com/package/reload). We serve a simple **importmap.json** to enable ES6 Modules import style after we reveal the ThreeJS node_modules files in the server.js
+**Vanilla ThreeJS Watch Starter** is a [nodeJS](https://nodejs.org/en/) application that runs on [Express](https://www.npmjs.com/package/express). We use [Handlebars](https://www.npmjs.com/package/handlebars) for templating, reloaded on the server by [gulp](https://www.npmjs.com/package/gulp) and [nodemon](https://www.npmjs.com/package/nodemon), on the client-side with [reload](https://www.npmjs.com/package/reload). We serve a simple **importmap.json** to enable ES6 Modules import style after we reveal the ThreeJS node_modules files in the server.js
 
 ## **Usage**
 
