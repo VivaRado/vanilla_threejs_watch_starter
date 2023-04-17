@@ -10,7 +10,7 @@ import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader.js";
 let camera, scene, renderer, stats, controls;
 let HEIGHT, WIDTH, windowHalfX, windowHalfY;
 let light, container, statbox, floor, shapeGroup;
-let SPEED = 0.001;
+let SPEED = 0.02;
 
 let _was = null;
 let _is = performance.now();
