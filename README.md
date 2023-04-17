@@ -1,4 +1,4 @@
-![alt text](./README.png)
+![alt text](./README.gif)
 
 ## **Preface**
 
