@@ -1,8 +1,7 @@
 import * as THREE from 'three';
 
 import Stats from 'three/examples/jsm/libs/stats.module.js';
-import { TWEEN } from 'three/examples/jsm/libs/tween.module.min.js'
-import { Geometry } from 'three/examples/jsm/deprecated/Geometry.js'
+
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 import { preload_object } from "/static/scripts/preload_object.js"

@@ -18,8 +18,8 @@ To run this code as is:
 1. Install Gulp: ```npm install -g gulp```
 1. Install Modules: ```npm install```
 1. Development **ThreeJS**:
-	* ```npm dev```
-	* client and server reloading.
+	* ```npm run dev```
+	* client and server reloading (.1)
 	* open browser at ```6006```
 1. Production **ThreeJS**:
 	* ```npm start```
@@ -28,6 +28,10 @@ To run this code as is:
 ### Structure:
 
 The structure is easy to change, all you got to do is declare the directories in the server.js.
+
+## **Footnotes**
+
+	* .1: The restart tag is added only when the server is running on ```npm run dev``` if you where running on ```npm start``` and switched restart once manually. 
 
 ## **Profile**
 

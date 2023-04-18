@@ -5,6 +5,8 @@ const port      = require( path.join( _r_, 'app' ,'port.js' ) );
 const nodemon   = require('nodemon');
 const fs        = require('fs');
 
+const spawn = require('child_process').spawn;
+
 path.join(_r_,'node_modules','three')
 
 gulp.task('default', function () {
@@ -14,8 +16,7 @@ gulp.task('default', function () {
       'PORT': port.address
     },
     args: ['--bundle'],
-    watch: ["server.js", 'gulpfile.js', 'static/**/*.*'],
-    stdout: false
+    watch: ["server.js", 'gulpfile.js', 'static/**/*.*']
   })
   .on('restart', function() {
     console.log("Restarted")
