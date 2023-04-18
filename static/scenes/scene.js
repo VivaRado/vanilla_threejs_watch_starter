@@ -9,7 +9,7 @@ import { preload_object } from "/static/scripts/preload_object.js"
 let scene, camera, renderer, stats, controls, shapeGroup;
 let light, container, statbox, floor;
 let HEIGHT, WIDTH, windowHalfX, windowHalfY;
-let SPEED = 0.001;
+let SPEED = 0.003;
 
 let _was = null;
 let _is = performance.now();
@@ -109,8 +109,8 @@ function createScene() {
 
 function rotateCube() {
 	shapeGroup.rotation.x -= SPEED * 2;
-	shapeGroup.rotation.y -= SPEED;
-	shapeGroup.rotation.z -= SPEED * 2;
+	shapeGroup.rotation.y -= SPEED * 2;
+	shapeGroup.rotation.z -= SPEED;
 }
 
 function animate() {
