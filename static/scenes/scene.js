@@ -9,7 +9,6 @@ import { TWEEN } from 'three/examples/jsm/libs/tween.module.min.js'
 import { Geometry } from 'three/examples/jsm/deprecated/Geometry.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { CSS3DObject, CSS3DSprite, CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js"
-import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader.js";
 
 import { preload_object } from "/static/scripts/preload_object.js"
 
