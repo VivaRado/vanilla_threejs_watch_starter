@@ -19,7 +19,7 @@ To run this code as is:
 1. Install Modules: ```npm install```
 1. Development **ThreeJS**:
 	* ```npm run dev```
-	* client and server reloading (.1)
+	* client and server reloading ①
 	* open browser at ```6006```
 1. Production **ThreeJS**:
 	* ```npm start```
@@ -31,7 +31,7 @@ The structure is easy to change, all you got to do is declare the directories in
 
 #### **Footnotes**
 
-* .1: The restart tag is added only when the server is running on ```npm run dev``` if you where running on ```npm start``` and switched restart once manually. 
+* ①: The restart tag is added only when the server is running on ```npm run dev``` if you where running on ```npm start``` and switched restart once manually. 
 
 
 #### **Profile**
