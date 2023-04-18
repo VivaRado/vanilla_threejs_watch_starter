@@ -29,11 +29,12 @@ To run this code as is:
 
 The structure is easy to change, all you got to do is declare the directories in the server.js.
 
-## **Footnotes**
+#### **Footnotes**
 
-	* .1: The restart tag is added only when the server is running on ```npm run dev``` if you where running on ```npm start``` and switched restart once manually. 
+* .1: The restart tag is added only when the server is running on ```npm run dev``` if you where running on ```npm start``` and switched restart once manually. 
 
-## **Profile**
+
+#### **Profile**
 
 *   Company: VivaRado LLP
 *   Twitter: [@vivarado](https://twitter.com/VivaRado)
