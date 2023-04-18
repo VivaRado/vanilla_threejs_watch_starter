@@ -2,7 +2,6 @@
 global._r_ 			= __dirname;
 const express 		= require('express');
 const exphbs 		= require('express-handlebars');
-const Handlebars 	= require('handlebars');
 const path 			= require('path');
 const reload 		= require('reload');
 const port 			= require( path.join( _r_, 'app', 'port.js' ) );
@@ -15,8 +14,7 @@ app.locals.importmap = JSON.stringify(imjson); // load as json into /views/layou
 
 const hbs = exphbs.create({
 	defaultLayout	: path.join(_r_, 'app', 'views', 'layout', 'default'),
-	extname			: ext,
-	handlebars		: Handlebars
+	extname			: ext
 });
 
 app.disable('x-powered-by')

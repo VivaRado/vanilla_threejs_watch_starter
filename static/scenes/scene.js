@@ -1,5 +1,9 @@
 import * as THREE from 'three';
 
+const camera = new THREE.PerspectiveCamera() 
+const scene = new THREE.Scene()
+//const shapeGroup = new THREE.Group();
+
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { TWEEN } from 'three/examples/jsm/libs/tween.module.min.js'
 import { Geometry } from 'three/examples/jsm/deprecated/Geometry.js'
@@ -7,10 +11,12 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { CSS3DObject, CSS3DSprite, CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js"
 import { SVGLoader } from "three/examples/jsm/loaders/SVGLoader.js";
 
-let camera, scene, renderer, stats, controls;
+import { preload_object } from "/static/scripts/preload_object.js"
+
+let renderer, stats, controls, shapeGroup;
+let light, container, statbox, floor;
 let HEIGHT, WIDTH, windowHalfX, windowHalfY;
-let light, container, statbox, floor, shapeGroup;
-let SPEED = 0.02;
+let SPEED = 0.001;
 
 let _was = null;
 let _is = performance.now();
@@ -32,9 +38,9 @@ const mat_shadow_plane = new THREE.ShadowMaterial({
 
 function initiate() {
 
-	scene = new THREE.Scene();
+	//scene = new THREE.Scene();
 
-	camera = new THREE.PerspectiveCamera();
+	//camera = new THREE.PerspectiveCamera();
 	camera.position.z = 5;
 	camera.position.y = 3;
 	
@@ -95,54 +101,15 @@ function createFloor(){
 	scene.add(floor_tex);
 }
 
-function createObject(){
-
-	const loader = new SVGLoader();
-	const svgUrl = '/static/vectors/threejs_logo.svg'; // Non Commercial Logo
-	
-	shapeGroup = new THREE.Group();
-
-	loader.load(svgUrl, (data) => {
-		var extrudeOptions = {
-	      depth: 7,
-	      bevelEnabled: false
-	    }
-		for( var path of data.paths ){
-			for( var shape of SVGLoader.createShapes( path ) ){
-				var geometry = new THREE.ExtrudeGeometry( shape, extrudeOptions ),
-						mesh = new THREE.Mesh( geometry, mat_shape );
-
-				mesh.castShadow = true;
-
-				shapeGroup.add( mesh );
-			}
-		}
-
-		const box = new THREE.Box3().setFromObject(shapeGroup);
-		const size = new THREE.Vector3();
-		box.getSize(size);
-
-		const yOffset = (size.y / -2);
-		const xOffset = (size.x / -2);
-
-		shapeGroup.children.forEach(item => {
-		  item.position.x = xOffset;
-		  item.position.y = yOffset;
-		});
-
-		shapeGroup.scale.set(0.005, 0.005, 0.005)
-		scene.add(shapeGroup);
-
-	});
-}
-
 function createScene() {
 	createLights()
-	createFloor()
-	createObject()
+	scene.add(shapeGroup)
+	createFloor()	
 }
 
 (async function main() {
+	shapeGroup = await preload_object();
+
 	initiate()
 	createScene()
 	animate()
