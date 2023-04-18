@@ -1,9 +1,5 @@
 import * as THREE from 'three';
 
-const camera = new THREE.PerspectiveCamera() 
-const scene = new THREE.Scene()
-//const shapeGroup = new THREE.Group();
-
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 import { TWEEN } from 'three/examples/jsm/libs/tween.module.min.js'
 import { Geometry } from 'three/examples/jsm/deprecated/Geometry.js'
@@ -12,7 +8,7 @@ import { CSS3DObject, CSS3DSprite, CSS3DRenderer } from "three/examples/jsm/rend
 
 import { preload_object } from "/static/scripts/preload_object.js"
 
-let renderer, stats, controls, shapeGroup;
+let scene, camera, renderer, stats, controls, shapeGroup;
 let light, container, statbox, floor;
 let HEIGHT, WIDTH, windowHalfX, windowHalfY;
 let SPEED = 0.001;
@@ -37,9 +33,8 @@ const mat_shadow_plane = new THREE.ShadowMaterial({
 
 function initiate() {
 
-	//scene = new THREE.Scene();
-
-	//camera = new THREE.PerspectiveCamera();
+	scene = new THREE.Scene();
+	camera = new THREE.PerspectiveCamera();
 	camera.position.z = 5;
 	camera.position.y = 3;
 	
