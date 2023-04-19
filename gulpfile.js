@@ -2,6 +2,7 @@ global._r_      = __dirname;
 const gulp      = require('gulp');
 const path      = require('path');
 const port      = require( path.join( _r_, 'app' ,'port.js' ) );
+const spinner   = require( path.join( _r_, 'app' ,'spinner.js' ) );
 const nodemon   = require('nodemon');
 const fs        = require('fs');
 
@@ -19,7 +20,8 @@ gulp.task('default', function () {
     watch: ["server.js", 'gulpfile.js', 'static/**/*.*']
   })
   .on('restart', function() {
-    console.log("Restarted")
+    spinner.spin()
+    spinner.stop()
   })
 });
 
