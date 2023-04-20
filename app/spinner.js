@@ -1,4 +1,4 @@
-const P = ['◜ ', ' ◝', ' ◞', '◟ '];
+const P = "◢◣◤◥".split('');
 let loader;
 
 exports.spin = function() {
@@ -11,6 +11,6 @@ exports.spin = function() {
 exports.stop = function() {
 	setTimeout(() => {
 		clearInterval(loader);
-		process.stdout.write('\r◯ ');
+		process.stdout.write('\r ');
 	}, 5000);
 };
