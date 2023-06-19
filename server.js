@@ -33,7 +33,7 @@ const server = require('http').createServer(app)
 
 if (args.includes("--bundle")) {// Development
 	app.locals.reload = '<script src="/reload/reload.js"></script>'	
-	reload(app).then(function (reloadReturned) {
+	reload(app, {port:port.reloadaddress}).then(function (reloadReturned) {
 		server.listen(port.address)
 	}).catch(function (err) {
 		console.error('Reload could not start!', err)

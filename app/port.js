@@ -1,4 +1,5 @@
 module.exports = {
 	address: 6006,
-	host: 'localhost'
+	host: 'localhost',
+	reloadaddress: 6007
 };
